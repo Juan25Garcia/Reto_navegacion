@@ -17,7 +17,6 @@ x_now = 0
 y_now = 0
 theta_now = 0
 
-
     
 for i in range(len(xdir)):
     x_now, y_now, theta_now = giro(x_now, y_now, theta_now, xdir[i], ydir[i])

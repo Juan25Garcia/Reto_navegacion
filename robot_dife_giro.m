@@ -70,10 +70,10 @@ while t < Tf
     
  
     %Saturación de giro igual a 0 
-    if  vd > 0 && thetae <= 0.0001
+    if  vd > 0 && thetae <= 0.001
         Tf = 0;
     end
-    if vd < 0 && thetae >= -0.0001
+    if vd < 0 && thetae >= -0.001
         Tf = 0;
     end
 

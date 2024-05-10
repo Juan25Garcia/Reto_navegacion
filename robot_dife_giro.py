@@ -46,6 +46,9 @@ def giro (x,y,theta,xd,yd):
         vd = (L * w) / (2 * R)
         vi = -vd  # Velocidad de la llanta izquierda (en sentido contrario)
 
+        print(vd)
+        print(vi)
+
         # Simulación
         theta += w * dt  # Actualiza la orientación
         
@@ -56,9 +59,9 @@ def giro (x,y,theta,xd,yd):
             theta += 2 * np.pi
 
         # Detener la simulación si el coche está correctamente orientado
-        if vd > 0 and thetae <= 0.001:
+        if vd > 0 and thetae <= 0.01:
             Tf = 0
-        if vd < 0 and thetae >= -0.001:
+        if vd < 0 and thetae >= -0.01:
             Tf = 0
 
         # Graficación

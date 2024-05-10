@@ -82,8 +82,11 @@ def despl(x,y,theta,xd,yd):
         vi = (2 * ((2 * v) - (2 * w * L))) / R  # Velocidad llanta izquierda
         vd = vi + (L * w / R)  # Velocidad llanta derecha
 
+        print(vd)
+        print(vi)
+
         # Detener si está cerca del objetivo
-        if d <= 0.01:
+        if d <= 0.1:
             Tf = 0
 
         # Graficación
