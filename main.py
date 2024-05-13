@@ -31,3 +31,5 @@ for i in range(len(xdir)-1):
             print("Esperando la señal para continuar...")
 
     x_now, y_now, theta_now = despl(x_now, y_now, theta_now, xdir[i], ydir[i])
+
+#Mientras mande un true funciona el programa pero si mando un fa
