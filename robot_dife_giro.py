@@ -71,7 +71,7 @@ def giro (x,y,theta,xd,yd):
         plt.plot([x, x + 0.5 * np.cos(theta)], [y, y + 0.5 * np.sin(theta)], 'g-', linewidth=2)
         plt.axis([-10, 10, -10, 10])
         plt.xlabel("X")
-        plt.ylabel("Y")
+        plt.ylabel("Y3.")
         plt.title("Simulación del coche")
         plt.legend()
         plt.pause(0.01)  # Para ver los cambios durante la simulación
