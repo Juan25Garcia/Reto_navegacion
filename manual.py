@@ -18,14 +18,19 @@ while True:
     if keyboard.is_pressed('w'):
         x += np.cos(theta)
         y += np.sin(theta)
+        dir = [1, 1, 1, 1]
     elif keyboard.is_pressed('s'):
         x -= np.cos(theta)
         y -= np.sin(theta)
+        dir = [-1, -1, -1, -1]
     elif keyboard.is_pressed('a'):
         theta += np.pi / 8  # Girar 22.5 grados a la izquierda
+        dir = [1, -1, 1, -1]
     elif keyboard.is_pressed('d'):
         theta -= np.pi / 8  # Girar 22.5 grados a la derecha
+        dir = [-1, 1, -1, 1]
     elif keyboard.is_pressed(' '):
+        print("break")
         break
 
     # Graficación
@@ -40,7 +45,7 @@ while True:
     plt.xlabel("X")
     plt.ylabel("Y")
     plt.title("Simulación del Robot")
-    plt.pause(0.01)  # Pausa breve para actualizar la gráfica
+    plt.pause(0.01)  # Pausa breve para actualizar la gráfica, quitar en la vida real 
 
 plt.ioff()
 plt.show()
