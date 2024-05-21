@@ -2,9 +2,6 @@ from robot_dife_despl import despl
 from robot_dife_giro import giro
 from matrices import matrix
 
-
-
-
 # Solicitar al usuario la entrada
 #trayectoria_input = input("Ingrese las coordenadas como 'x,y; x,y; ...': ")
 trayectoria_input = "0,5;5,5;5,0;0,0" #cuadrado
@@ -30,11 +27,11 @@ for i in range(len(xdir)):
     x_now, y_now, theta_now = giro(x_now, y_now, theta_now, xdir[i], ydir[i])
     x_now, y_now, theta_now = despl(x_now, y_now, theta_now, xdir[i], ydir[i])
 
-#Mientras mande un true funciona el programa pero si mando un fa
 
-    #while True:  # Sub-bucle que actúa como pausa
-        #respuesta = input("Ingrese 'True' para continuar: ")
-        #if respuesta.strip().lower() == "true":  # Si recibe "True", sigue con el bucle principal
-            #break  # Rompe el sub-bucle para volver al bucle principal
-        #else:
-            #print("Esperando la señal para continuar...")
+
+    while True:  # Sub-bucle que actúa como pausa
+        respuesta = input("Ingrese 'True' para continuar: ")
+        if respuesta.strip().lower() == "true":  # Si recibe "True", sigue con el bucle principal
+            break  # Rompe el sub-bucle para volver al bucle principal
+        else:
+            print("Esperando la señal para continuar...")
