@@ -16,19 +16,21 @@ float radianes = 0.0;
 const float R = 0.03;  // Radio de llanta en metros
 const float L = 0.28;  // Distancia entre llantas en metros
 
-float vi = 0;
-float vd = 0;
+float vi = 0; //velocidad izquierda
+float vd = 0; //velocidad derecha
 
 // Constantes de control
-float kpr = 2;
-float kpt = 2;
+float kpr = 2; //rotación
+float kpt = 2; //traslación
 
 
 // Motores 
-const int I2 = 10;
-const int D2 = 9;
-const int I1 = 12;
-const int D1 = 8; 
+// Input 1 y 2 para motor 1 (rueda izquierda)
+// Input 3 y 4 para motor 2 (rueda derecha)
+const int I2 = 10; //Input 2
+const int D2 = 9;  //Input 4
+const int I1 = 12; //Input 1
+const int D1 = 8;  //Input 3
 
 // Variables para almacenar la trayectoria
 //char xdir[0,5,5,0]; 
@@ -208,7 +210,7 @@ void giro(int xd, int yd) {
 }
 
 
-void cuadrado(){
+void cuadrado(){ //funcion que hace la trayectoria de un cuadrado
   int xd1 = 0;
   int yd1 = 2;
   int xd2 = 0;
@@ -227,7 +229,7 @@ void cuadrado(){
   desplazamiento(xd4,yd4);
 }
 
-void triangulo(){
+void triangulo(){ //funcion que hace la trayectoria de un triangulo
   int xd1 = 6;
   int yd1 = 0;
   int xd2 = -3;
